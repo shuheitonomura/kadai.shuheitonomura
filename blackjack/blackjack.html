@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>ブラックジャック</title>
+</head>
+
+<body>
+  <header>
+    
+<div class="black"> 
+<span class="b1">ブ</span>
+<span class="b2">ラ</span>
+<span class="b3">ッ</span>
+<span class="b4">ク</span>
+<span class="b5">ジ</span>
+<span class="b6">ャ</span>
+<span class="b7">ッ</span>
+<span class="b8">ク</span>
+</div>
+
+
+  </header>
+
+  <main>
+
+<h2>相手の手札</h2>
+  
+<table>
+  <td>
+    <img src="imaging/h12.png" alt="">
+    <img src="imaging/h13.png" alt="">
+  </td>
+</table>
+    
+    
+<h2>自分の手札</h2>
+<table>
+  <td>
+  <div id="doroh"><img src="imaging/deza.png" alt=""></div>
+  </td>
+
+  <td>
+  <div id="cho_btn"><img src="imaging/s10.png" alt=""></div>
+  </td>
+</table>
+
+    <div id="com_hand">クリックしてカードを引いて！！</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer></footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+
+    $('#doroh').on('click', function () {
+
+const min = 0;
+const max = 8;
+const randomNumber = Math.floor(Math.random()*(max- min +1))+min;
+
+if(randomNumber === 0){
+  $('#result').text('ブラックジャック');
+  $('#com_hand').html('<img src="imaging/s1.png"alt="">');
+  }else if(randomNumber === 1){
+  $('#result').text('惨敗');
+  $('#com_hand').html('<img src="imaging/s3.png"alt="">');
+  } else if(randomNumber === 2){
+  $('#result').text('惨敗');
+  $('#com_hand').html('<img src="imaging/s4.png"alt="">');
+  }else if(randomNumber === 3){
+  $('#result').text('負け');
+  $('#com_hand').html('<img src="imaging/s5.png"alt="">');
+  } else if(randomNumber === 4){
+  $('#result').text('負け');
+  $('#com_hand').html('<img src="imaging/s6.png"alt="">');
+  }else if(randomNumber === 5){
+  $('#result').text('負け');
+  $('#com_hand').html('<img src="imaging/s7.png"alt="">');
+  } else if(randomNumber === 6){
+  $('#result').text('がんばれ');
+  $('#com_hand').html('<img src="imaging/s8.png"alt="">');
+  }else if(randomNumber === 7){
+  $('#result').text('惜しい');
+  $('#com_hand').html('<img src="imaging/s9.png"alt="">');
+  } else if(randomNumber === 8){
+  $('#result').text('引き分け');
+  $('#com_hand').html('<img src="imaging/s11.png"alt="">');
+  }
+});
+
+  </script>
+
+</body>
+
+</html>

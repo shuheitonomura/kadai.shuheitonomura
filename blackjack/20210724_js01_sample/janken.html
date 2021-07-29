@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/sample.css">
+  <title>じゃんけん</title>
+</head>
+
+<body>
+  <header>
+    <h1 class="title1">じゃんけん</h1>
+  </header>
+
+  <main>
+    <ul>
+      <li id="gu_btn">グー</li>
+      <li id="cho_btn">チョキ</li>
+      <li id="par_btn">パー</li>
+    </ul>
+    <div id="com_hand">コンピュータの出した手は？</div>
+    <div id="result">結果は？</div>
+  </main>
+
+  <footer>フッター</footer>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    //ここに処理を追加
+
+    $('#gu_btn').on('click', function () {
+
+const min = 0;
+const max = 2;
+const randomNumber = Math.floor(Math.random()*(max- min +1))+min;
+
+if(randomNumber === 0){
+  $('#result').text('勝ち');
+  $('#com_hand').text('チョキ');
+  }else if(randomNumber === 1){
+  $('#result').text('負け');
+  $('#com_hand').text('パー');
+  } else if(randomNumber === 2){
+  $('#result').text('あいこ');
+  $('#com_hand').text('グー');
+
+  }
+});
+
+$('#cho_btn').on('click', function () {
+
+const min = 0;
+const max = 2;
+const randomNumber = Math.floor(Math.random()*(max- min +1))+min;
+
+if(randomNumber === 0){
+  $('#result').text('勝ち');
+  $('#com_hand').text('パー');
+  }else if(randomNumber === 1){
+  $('#result').text('負け');
+  $('#com_hand').text('グー');
+  } else if(randomNumber === 2){
+  $('#result').text('あいこ');
+  $('#com_hand').text('チョキ');
+
+  }
+});
+
+
+$('#par_btn').on('click', function () {
+
+const min = 0;
+const max = 2;
+const randomNumber = Math.floor(Math.random()*(max- min +1))+min;
+
+if(randomNumber === 0){
+  $('#result').text('勝ち');
+  $('#com_hand').text('グー');
+  }else if(randomNumber === 1){
+  $('#result').text('負け');
+  $('#com_hand').text('チョキ');
+  } else if(randomNumber === 2){
+  $('#result').text('あいこ');
+  $('#com_hand').text('パー');
+
+  }
+});
+
+
+  </script>
+
+</body>
+
+</html>

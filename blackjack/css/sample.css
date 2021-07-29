@@ -1,0 +1,49 @@
+body{
+    margin:0;
+    padding:0;
+    text-align:left;
+    font-size: 32px;
+}
+header{
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    text-align: center;
+}
+main{
+    border-bottom:1px solid #ccc;
+    text-align: center;
+    background-image: url(../imaging/table2.jpg);
+}
+footer{
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    text-align: center;
+}
+
+
+li:hover{
+    background: #0066CC;
+    color:#fff;
+}
+
+.title1{
+    color: black;
+}
+
+img{
+    width: 100px;
+    margin: 0 auto;
+}
+.com_hand{color: white;}
+
+
+table{
+    margin: auto;
+}
+
+.black{
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+}
+
